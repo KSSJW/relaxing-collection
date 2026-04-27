@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Relaxing Collection
+Comment=Relaxing Collection
+Exec=relaxing_collection
+Icon=relaxing-collection
+Terminal=false
+Type=Application
+Categories=Utility;
