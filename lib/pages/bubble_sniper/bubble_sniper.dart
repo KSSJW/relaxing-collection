@@ -84,8 +84,9 @@ class BubbleSniperState extends State<BubbleSniper> {
       if (initialized) _score++;
     });
 
-    await Future.delayed(Duration(milliseconds: _duration));
-    _tapDown = false; // 动画完成后解锁
+    Future.delayed(Duration(milliseconds: _duration), () {
+      _tapDown = false; // 动画完成后解锁
+    });
     
     _stopwatch.reset();
     _stopwatch.start();
