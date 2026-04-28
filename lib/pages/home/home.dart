@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:relaxing_collection/pages/home/bubble_breaker/bubble_breaker.dart';
+import 'package:relaxing_collection/pages/bubble_sniper/bubble_sniper.dart';
 
 class Home extends StatefulWidget{
   const Home({super.key});
@@ -10,13 +10,11 @@ class Home extends StatefulWidget{
 
 class HomeState extends State<Home> with AutomaticKeepAliveClientMixin {
   late Future _initFuture;
+
   final List<Map<String, Object>> _games = [
-    {"color": Colors.cyan,        "icon": Icons.bubble_chart, "title": "Bubble Breaker",  "game": BubbleBreaker()},
-    {"color": Colors.blueAccent,  "icon": Icons.padding,      "title": "Game2",           "game": BubbleBreaker()},
-    {"color": Colors.green,       "icon": Icons.radar,        "title": "Game3",           "game": BubbleBreaker()},
-    {"color": Colors.amber,       "icon": Icons.face,         "title": "Game4",           "game": BubbleBreaker()},
-    {"color": Colors.blueGrey,    "icon": Icons.hail,         "title": "Game5",           "game": BubbleBreaker()}
+    {"color": Colors.cyan, "icon": Icons.bubble_chart, "title": "Bubble Sniper", "game": BubbleSniper()}
   ];
+  
   int _crossAxisCount = 2;
   double _childAspectRatio = 4 / 3;
 

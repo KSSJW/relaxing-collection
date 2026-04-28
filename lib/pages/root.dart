@@ -12,6 +12,7 @@ class Root extends StatefulWidget{
 class RootState extends State<Root> {
   late Future _initFuture;
   int _navBarSelectedIndex = 0;
+  bool _navBarSelected = false;
   final PageController _pageController = PageController();
 
   Future<bool> _init() async {
@@ -49,6 +50,13 @@ class RootState extends State<Root> {
                   const Home(),
                   const Settings()
                 ],
+                onPageChanged: (value) {
+                  if (!_navBarSelected) {
+                    setState(() {
+                      _navBarSelectedIndex = value;
+                    });
+                  }
+                },
               )
             ],
           ),
@@ -59,16 +67,20 @@ class RootState extends State<Root> {
             ],
             labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
             selectedIndex: _navBarSelectedIndex,
-            onDestinationSelected: (value) {
+            onDestinationSelected: (value) async {
+              _navBarSelected = true;
+
               setState(() {
                 _navBarSelectedIndex = value;
               });
 
-              _pageController.animateToPage(
+              await _pageController.animateToPage(
                 value,
                 duration: const Duration(milliseconds: 300),
                 curve: Curves.easeInOut
               );
+
+              _navBarSelected = false;
             },
           ),
         );
