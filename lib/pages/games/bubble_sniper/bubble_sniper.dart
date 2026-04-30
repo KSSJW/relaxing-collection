@@ -2,9 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:relaxing_collection/pages/bubble_sniper/bubble_sniper_functions.dart';
-import 'package:relaxing_collection/pages/bubble_sniper/bubble_sniper_items.dart';
-import 'package:relaxing_collection/pages/bubble_sniper_settings/bubble_sniper_settings.dart';
+import 'package:relaxing_collection/pages/games/bubble_sniper/bubble_sniper_functions.dart';
+import 'package:relaxing_collection/pages/games/bubble_sniper/bubble_sniper_items.dart';
+import 'package:relaxing_collection/pages/games/bubble_sniper_settings/bubble_sniper_settings.dart';
 
 class BubbleSniper extends StatefulWidget {
   const BubbleSniper({super.key});

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:relaxing_collection/pages/bubble_sniper/bubble_sniper.dart';
+import 'package:relaxing_collection/pages/games/bubble_cleaner/bubble_cleaner.dart';
+import 'package:relaxing_collection/pages/games/bubble_sniper/bubble_sniper.dart';
+import 'package:relaxing_collection/pages/games/dino/dino.dart';
+import 'package:relaxing_collection/pages/games/mine_sweeper/mine_sweeper.dart';
 
 class Home extends StatefulWidget{
   const Home({super.key});
@@ -12,7 +15,10 @@ class HomeState extends State<Home> with AutomaticKeepAliveClientMixin {
   late Future _initFuture;
 
   final List<Map<String, Object>> _games = [
-    {"color": Colors.cyan, "icon": Icons.bubble_chart, "title": "Bubble Sniper", "game": BubbleSniper()}
+    {"color": Colors.cyan, "icon": Icons.bubble_chart, "title": "Bubble Sniper", "game": BubbleSniper()},
+    {"color": Colors.green, "icon": Icons.bubble_chart, "title": "Bubble Cleaner", "game": BubbleCleaner()},
+    {"color": Colors.orange, "icon": Icons.search, "title": "Mine Sweeper", "game": MineSweeper()},
+    {"color": Colors.teal, "icon": Icons.check_box_outline_blank, "title": "Dino", "game": Dino()}
   ];
   
   int _crossAxisCount = 2;

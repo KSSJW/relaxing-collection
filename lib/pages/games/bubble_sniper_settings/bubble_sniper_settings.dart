@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:relaxing_collection/pages/bubble_sniper/bubble_sniper_functions.dart';
+import 'package:relaxing_collection/pages/games/bubble_sniper/bubble_sniper_functions.dart';
 
 class BubbleSniperSettings extends StatefulWidget{
   const BubbleSniperSettings({super.key});
